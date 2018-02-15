@@ -28,4 +28,9 @@ export class BugTrackerComponent{
 	onRemoveClosedClick(){
 		this.bugs = this.bugs.filter(bug => !bug.isClosed);
 	}
+
+	getTruncatedText(str){
+		console.log('getTruncatedText triggered');
+		return str.length <= 30 ? str : str.substr(0,30) + '...';
+	}
 }
