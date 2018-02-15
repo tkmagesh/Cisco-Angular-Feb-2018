@@ -9,7 +9,7 @@ import { BugStatsComponent } from './bugTracker/views/bugStats/bugStats.componen
 
 import { TrimTextPipe } from './bugTracker/pipes/trimText.pipe';
 import { SortPipe } from './bugTracker/pipes/sort.pipe';
-
+import { ClosedCountPipe } from './bugTracker/pipes/closedCount.pipe';
 
 
 
@@ -20,6 +20,7 @@ import { SortPipe } from './bugTracker/pipes/sort.pipe';
     , BugStatsComponent
     , TrimTextPipe
     , SortPipe
+    , ClosedCountPipe
   ],
   imports: [
     BrowserModule

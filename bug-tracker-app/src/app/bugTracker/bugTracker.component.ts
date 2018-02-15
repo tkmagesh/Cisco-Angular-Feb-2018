@@ -16,11 +16,15 @@ export class BugTrackerComponent{
 
 	onCreateNew(newBugName){
 		let newBug : Bug = this.bugOperations.createNew(newBugName);
-		this.bugs.push(newBug);
+		//this.bugs.push(newBug);
+		this.bugs = [...this.bugs, newBug];
 	}
 
 	onBugClick(bugToToggle : Bug){
-		this.bugOperations.toggle(bugToToggle);
+		//let toggledBug = this.bugOperations.toggle(bugToToggle);
+		bugToToggle.isClosed = !bugToToggle.isClosed;
+		//this.bugs = this.bugs.map(bug => bug === bugToToggle ? toggledBug : bug);
+		this.bugs = [...this.bugs];
 	}
 
 	
