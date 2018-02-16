@@ -15,7 +15,7 @@ import { ElapsedPipe } from './pipes/elapsed.pipe';
 		TrimTextPipe,
 		SortPipe,
 		ElapsedPipe
-	]
+	],
 	providers : []
 })
-export class UtilsModule
+export class UtilsModule{}
