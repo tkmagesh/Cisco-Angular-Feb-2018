@@ -9,12 +9,10 @@ import { BugTrackerComponent } from './bugTracker/bugTracker.component';
 import { BugStatsComponent } from './bugTracker/views/bugStats/bugStats.component';
 import { BugEditComponent } from './bugTracker/views/bugEdit/bugEdit.component';
 
-import { TrimTextPipe } from './bugTracker/pipes/trimText.pipe';
-import { SortPipe } from './bugTracker/pipes/sort.pipe';
-import { ElapsedPipe } from './bugTracker/pipes/elapsed.pipe';
 
 import { ClosedCountPipe } from './bugTracker/pipes/closedCount.pipe';
 
+import { UtilsModule } from './utils/utils.module';
 
 
 @NgModule({
@@ -23,13 +21,11 @@ import { ClosedCountPipe } from './bugTracker/pipes/closedCount.pipe';
     , BugTrackerComponent
     , BugStatsComponent
     , BugEditComponent
-    , TrimTextPipe
-    , SortPipe
-    , ElapsedPipe
     , ClosedCountPipe
   ],
   imports: [
     BrowserModule
+    , UtilsModule
   ],
   providers: [
   	BugOperationsService
