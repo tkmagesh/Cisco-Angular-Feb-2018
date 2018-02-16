@@ -10,6 +10,8 @@ import { BugStatsComponent } from './bugTracker/views/bugStats/bugStats.componen
 
 import { TrimTextPipe } from './bugTracker/pipes/trimText.pipe';
 import { SortPipe } from './bugTracker/pipes/sort.pipe';
+import { ElapsedPipe } from './bugTracker/pipes/elapsed.pipe';
+
 import { ClosedCountPipe } from './bugTracker/pipes/closedCount.pipe';
 
 
@@ -21,6 +23,7 @@ import { ClosedCountPipe } from './bugTracker/pipes/closedCount.pipe';
     , BugStatsComponent
     , TrimTextPipe
     , SortPipe
+    , ElapsedPipe
     , ClosedCountPipe
   ],
   imports: [

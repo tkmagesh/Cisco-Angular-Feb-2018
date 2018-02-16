@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Bug } from './models/Bug';
 
 import { BugStorageService } from './services/bugStorage.service';
@@ -7,10 +7,13 @@ import { BugStorageService } from './services/bugStorage.service';
 	selector : 'app-bug-tracker',
 	templateUrl : 'bugTracker.component.html'
 })
-export class BugTrackerComponent{
+export class BugTrackerComponent implements OnInit{
 	bugs : Bug[] = [];
 	
 	constructor(private bugStorage : BugStorageService){
+		
+	}
+	ngOnInit(){
 		this.bugs = this.bugStorage.getAll();
 	}
 
