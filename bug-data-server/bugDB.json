@@ -1,24 +1,6 @@
 {
   "bugs": [
     {
-      "id": 3,
-      "name": "Router is not routing",
-      "isClosed": true,
-      "createdAt": "2018-01-18T09:23:19.074Z"
-    },
-    {
-      "id": 4,
-      "name": "Templates are not cached",
-      "isClosed": true,
-      "createdAt": "2018-01-18T09:38:36.962Z"
-    },
-    {
-      "id": 5,
-      "name": "Unable to add anew bug",
-      "isClosed": false,
-      "createdAt": "2018-02-10T10:35:06.330Z"
-    },
-    {
       "id": 6,
       "name": "Promises are not promising",
       "isClosed": false,
@@ -35,6 +17,12 @@
       "name": "Server is not responding",
       "isClosed": false,
       "createdAt": "2018-02-16T08:26:39.533Z"
+    },
+    {
+      "id": 9,
+      "name": "Async doesnt work",
+      "isClosed": false,
+      "createdAt": "2018-02-16T08:40:50.456Z"
     }
   ],
   "projects": [

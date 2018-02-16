@@ -11,8 +11,6 @@ export class BugServerService{
 
 	}
 	getAll() : Promise<Bug[]>{
-		
-
 		return axios
 			.get(this.baseUrl)
 			.then(response => response.data)
@@ -29,7 +27,7 @@ export class BugServerService{
 			.put(`${this.baseUrl}/${bugToToggle.id}`, toggledBug)
 			.then(response => response.data);
 	}
-	remove(bug : Bug) : Promise<void>{
+	remove(bug : Bug) : Promsie<void>{
 		return axios
 			.delete(`${this.baseUrl}/${bug.id}`)
 			.then(response => response.data);	

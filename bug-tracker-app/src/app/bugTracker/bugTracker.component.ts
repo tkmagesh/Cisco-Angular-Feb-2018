@@ -14,34 +14,26 @@ export class BugTrackerComponent implements OnInit{
 	constructor(private bugServer : BugServerService){
 		
 	}
-	ngOnInit(){
-		//this.bugs = this.bugStorage.getAll();
-		this.bugServer
-			.getAll()
-			.then(bugs => this.bugs = bugs);
+	async ngOnInit(){
+		this.bugs = await this.bugServer.getAll();
 	}
 
 	onNewBugAdded(newBug : Bug){
 		this.bugs = [...this.bugs, newBug];
 	}
 
-	onBugClick(bugToToggle : Bug){
-		/*let toggledBug = this.bugStorage.toggle(bugToToggle);		
-		this.bugs = this.bugs.map(bug => bug === bugToToggle ? toggledBug : bug);*/
-
-		this.bugServer
-			.toggle(bugToToggle)
-			.then(toggledBug =>  this.bugs = this.bugs.map(bug => bug.id === bugToToggle.id ? toggledBug : bug));
+	async onBugClick(bugToToggle : Bug){
+		let toggledBug = await this.bugServer.toggle(bugToToggle);
+		this.bugs = this.bugs.map(bug => bug.id === bugToToggle.id ? toggledBug : bug);
 	}
-
 	
-
 	onRemoveClosedClick(){
 		this.bugs
 			.filter(bug => bug.isClosed)
-			.forEach(closedBug => this.bugServer
-				.remove(closedBug)
-				.then(() => this.bugs = this.bugs.filter(bug => bug.id !== closedBug.id));
+			.forEach(async closedBug => {
+				await this.bugServer.remove(closedBug);
+				this.bugs = this.bugs.filter(bug => bug.id !== closedBug.id);
+			});
 	}
 
 }
