@@ -18,6 +18,6 @@ export class BugEditComponent{
 	onCreateNew(newBugName){
 		this.bugServer
 			.addNew(newBugName)
-			.subscribe(newBug => this.bugAdded.emit(newBug));
+			.then(newBug => this.bugAdded.emit(newBug));
 	}
 }
