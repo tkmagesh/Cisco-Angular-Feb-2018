@@ -17,9 +17,7 @@ export class BugTrackerComponent implements OnInit{
 		this.bugs = this.bugStorage.getAll();
 	}
 
-	onCreateNew(newBugName){
-		let newBug : Bug = this.bugStorage.addNew(newBugName);
-		//this.bugs.push(newBug);
+	onNewBugAdded(newBug : Bug){
 		this.bugs = [...this.bugs, newBug];
 	}
 
