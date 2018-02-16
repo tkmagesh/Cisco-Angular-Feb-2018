@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { BugOperationsService } from './bugTracker/services/bugOperations.service';
 import { BugStorageService } from './bugTracker/services/bugStorage.service';
-import { BugServerService } from './bugTracker/services/bugServer.service';
 
 import { AppComponent } from './app.component';
 import { BugTrackerComponent } from './bugTracker/bugTracker.component';
@@ -31,7 +30,6 @@ import { UtilsModule } from './utils/utils.module';
   providers: [
   	BugOperationsService
     , BugStorageService
-    , BugServerService
   ],
   bootstrap: [AppComponent]
 })
