@@ -23,6 +23,12 @@
       "name": "Async doesnt work",
       "isClosed": false,
       "createdAt": "2018-02-16T08:40:50.456Z"
+    },
+    {
+      "id": 10,
+      "name": "unable to add a new bug",
+      "isClosed": true,
+      "createdAt": "2018-02-16T10:20:20.393Z"
     }
   ],
   "projects": [
